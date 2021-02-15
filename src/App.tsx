@@ -1,7 +1,21 @@
 import logo from './logo.svg';
+import { useEffect } from 'react';
 import './App.css';
 
 function App() {
+    const loop = () => {
+        let x = 0;
+        while (x < 10) {
+            x += 1;
+            console.log(x);
+        }
+    }
+    
+    useEffect(() => {
+        loop();
+        return () => {
+        }
+    }, [])
   return (
     <div className="App">
       <header className="App-header">
